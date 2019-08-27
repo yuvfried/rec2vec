@@ -1,0 +1,64 @@
+#dry methods
+baking
+shirring
+boiling
+frying
+cockaigne
+deep fat frying
+sautéing
+stir-frying
+pan-fried
+deglazing
+grilling
+roasting
+
+#wet methods
+bain-marie
+basting
+blanching
+boiling
+clay pot cooking
+poaching
+pressure cooking
+scalding
+simmering
+sous-vide
+steaming
+stewing
+tempering
+thermal cooking
+cold water candy test
+caramelizing
+
+#outdoor cooking
+barbecuing
+cooking in a dutch oven
+grilling
+solar oven cooking
+smoking
+
+#other techniques
+#adding flavor
+brining
+dredging
+marinating
+spice rubs
+
+#preserving foods
+fermenting
+pickling
+canning
+cold storage
+drying
+
+#preparing ingredients
+boning
+chiffonade
+chopping
+cubing
+degorging
+julienning
+mincing
+slicing
+melting
+creaming

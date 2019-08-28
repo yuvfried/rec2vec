@@ -7,5 +7,6 @@ rec_inst = pd.DataFrame([["baking", "dry"],["frying", "wet"]])  # recipe instruc
 # Create a new Series of STEMMED techniques
 ps = PorterStemmer()
 raw_techs["stemmed"] = raw_techs["tech"].apply(lambda x: ps.stem(x))
+export_csv = raw_techs.to_csv(r'raw_techs.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
 
 # STEM all the techniques in the recipe instructions DB

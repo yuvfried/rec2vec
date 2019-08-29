@@ -1,15 +1,8 @@
-import itertools
-import plotly.graph_objs as go
-import chart_studio.plotly as py
-import plotly.offline as offline
-
-import numpy as np
+import time
 import pandas as pd
 import plotly.express as px
 from gensim.models import Word2Vec
 from sklearn.manifold import TSNE
-# import MulticoreTSNE as MTSNE
-import cmake
 
 
 def run_tsne(nemb):
@@ -18,29 +11,33 @@ def run_tsne(nemb):
 
 
 # constructing DBs
-model = Word2Vec.load("ex1.model")
-ing_names = ["carrot", "carrot", "carrot", "carrot", "honey", "sugar", "onion", "garlic", "potato"]
-ing_vecs = [model.wv[ing] for ing in ing_names]  # import ingredients model vectors
-ing_vecs = np.random.rand(100, 100)
+model = Word2Vec.load("food2vec_ver1.model")
+ing_names = pd.read_csv("ingredients_of_corpus.csv", index_col=0, squeeze=True)
 
-colors = [1] * 100
-# for i in range(9):
-#     ing_vecs[i * 10] = [x * 2 for x in ing_vecs[i * 100]]
-#     colors[i * 10] = colors[i * 100] = i
+filt_ings_names = []
+ing_vecs = []
 
-# ing_vecs = TSNE(n_components=2).fit_transform(ing_vecs)  # projecting the ingredients vectors on R^2
+for ing in ing_names:
+    if ing in model.wv.vocab:
+        filt_ings_names.append(ing)
+        ing_vecs.append(model.wv[ing])  # import ingredients model vectors
+
+print(time.ctime())
+
+# projecting the ingredients vectors on R^2
 ing_vecs = run_tsne(ing_vecs)
+
+print(time.ctime())
 
 # prepare the DB to be plotted
 db = pd.DataFrame(ing_vecs)
 db.columns = ["x", "y"]
-# db["ing_names"] = ing_names
-db["ing_names"] = [i for i in range(100)]
+db["ing_names"] = filt_ings_names
+# db["color"] = colors (just put different levels on this column and the next command will know to distinguise between them)
 
-db["color"] = colors
-print(db.color.to_string(index=False))
 # plot data
-fig = px.scatter(db, x="x", y="y", hover_name="ing_names", hover_data=["ing_names"], color="color")
+fig = px.scatter(db, x="x", y="y", hover_name="ing_names")
+# fig = px.scatter(db, x="x", y="y", hover_name="ing_names", hover_data=["ing_names"], color="color")
 fig.show()
 
 # layout = go.Layout(
@@ -49,8 +46,6 @@ fig.show()
 # )
 # fig = go.Figure(data=db[["x", "y"]], layout=layout)
 # plot_url = py.plot(fig, filename='text-hover')
-
-
 
 
 # flatten = lambda l: [item for sublist in l for item in sublist]

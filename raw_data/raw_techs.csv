@@ -1,0 +1,60 @@
+tech,type,stemmed,count
+baking,dry methods,bake,0
+shirring,dry methods,shir,0
+boiling,dry methods,boil,0
+frying,dry methods,fri,0
+cockaigne,dry methods,cockaign,0
+deep fat frying,dry methods,deep fat fri,0
+baking,dry methods,bake,0
+shirring,dry methods,shir,0
+boiling,dry methods,boil,0
+frying,dry methods,fri,0
+cockaigne,dry methods,cockaign,0
+deep fat frying,dry methods,deep fat fri,0
+sauteing,dry methods,saut,0
+stir-frying,dry methods,stir-fri,0
+pan-fried,dry methods,pan-fri,0
+deglazing,dry methods,deglaz,0
+grilling,dry methods,grill,0
+roasting,dry methods,roast,0
+bain-marie,wet methods,bain-mari,0
+basting,wet methods,bast,0
+blanching,wet methods,blanch,0
+boiling,wet methods,boil,0
+clay pot cooking,wet methods,clay pot cook,0
+poaching,wet methods,poach,0
+pressure cooking,wet methods,pressure cook,0
+scalding,wet methods,scald,0
+simmering,wet methods,simmer,0
+sous-vide,wet methods,sous-vid,0
+steaming,wet methods,steam,0
+stewing,wet methods,stew,0
+tempering,wet methods,temper,0
+thermal cooking,wet methods,thermal cook,0
+cold water candy test,wet methods,cold water candy test,0
+caramelizing,wet methods,caramel,0
+barbecuing,outdoor cooking,barbecu,0
+cooking in a dutch oven,outdoor cooking,cooking in a dutch oven,0
+grilling,outdoor cooking,grill,0
+solar oven cooking,outdoor cooking,solar oven cook,0
+smoking,outdoor cooking,smoke,0
+brining,adding flavor,brine,0
+dredging,adding flavor,dredg,0
+marinating,adding flavor,marin,0
+spice rubs,adding flavor,spice rub,0
+fermenting,preserving foods,ferment,0
+pickling,preserving foods,pickl,0
+canning,preserving foods,canning,0
+cold storage,preserving foods,cold storag,0
+drying,preserving foods,dri,0
+boning,preparing ingredients,bone,0
+chiffonade,preparing ingredients,chiffonad,0
+chopping,preparing ingredients,chop,0
+cubing,preparing ingredients,cube,0
+degorging,preparing ingredients,degorg,0
+julienning,preparing ingredients,julien,0
+knife skills,preparing ingredients,knife skil,0
+mincing,preparing ingredients,minc,0
+slicing,preparing ingredients,slice,0
+melting chocolate,preparing ingredients,melting chocol,0
+creaming,preparing ingredients,cream,0
